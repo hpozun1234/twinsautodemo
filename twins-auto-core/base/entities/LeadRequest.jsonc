@@ -1,0 +1,37 @@
+{
+  "name": "LeadRequest",
+  "type": "object",
+  "properties": {
+    "vehicle_info": {
+      "type": "string",
+      "description": "Vehicle year, make, and model"
+    },
+    "phone": {
+      "type": "string",
+      "description": "Customer phone number"
+    },
+    "name": {
+      "type": "string",
+      "description": "Customer name"
+    },
+    "service_needed": {
+      "type": "string",
+      "description": "Type of service requested"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "new",
+        "contacted",
+        "scheduled",
+        "completed"
+      ],
+      "default": "new",
+      "description": "Lead status"
+    }
+  },
+  "required": [
+    "vehicle_info",
+    "phone"
+  ]
+}
